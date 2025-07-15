@@ -39,9 +39,11 @@ dependencies {
 	implementation("net.serenity-bdd:serenity-core:4.2.34")
 	implementation("net.serenity-bdd:serenity-cucumber:4.2.34")
 	implementation("net.serenity-bdd:serenity-rest-assured:4.2.34")
-	testImplementation ("net.serenity-bdd:serenity-spring:3.6.12")
-	testImplementation ("net.serenity-bdd:serenity-junit:3.6.12")
+	testImplementation ("net.serenity-bdd:serenity-spring:4.2.34")
+	testImplementation ("net.serenity-bdd:serenity-junit:4.2.34")
 	testImplementation ("org.junit.vintage:junit-vintage-engine")
+	// https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+	implementation("io.github.bonigarcia:webdrivermanager:6.1.0")
 }
 
 //task.named('test'){

@@ -5,6 +5,6 @@ import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/features", tags = "", glue = "com.test.serenityBddTests", publish = true)
+@CucumberOptions(features = "src/test/resources/features", tags = "@ReceiveCorrectResponse1", glue = "com.test.serenityBddTests", publish = true)
 public class SpringRunnerTests {
 }

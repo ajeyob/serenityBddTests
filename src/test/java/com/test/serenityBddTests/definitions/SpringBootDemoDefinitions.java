@@ -14,6 +14,9 @@ public class SpringBootDemoDefinitions {
     AbstractRestAssuredHelper helper;
     private Response response;
 
+
+
+
     @Given("I send a request to the URL {string}")
     public void iSendARequest(String endpoint) throws Exception  {
         response = helper.getAnonymousRequest()
@@ -30,11 +33,17 @@ public class SpringBootDemoDefinitions {
 
     @When("I call the end point {string}")
     public void iCallTheEndPoint(String fullUrl) {
-        helper.configureRestAssured();
-        response = helper.getAnonymousRequest()
-                .header("Content-Type", "application/json").
-                when()
-                .get(fullUrl);
+//        helper.configureRestAssured();
+        response= SerenityRest
+                .given()
+                .baseUri(fullUrl).header("Content-Type", "application/json")
+                .when()
+                .get();
+
+//        response = helper.getAnonymousRequest()
+//                .header("Content-Type", "application/json").
+//                when()
+//                .get(fullUrl);
     }
 
 
